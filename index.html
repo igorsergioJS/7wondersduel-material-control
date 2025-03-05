@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Material Control - 7 Wonders: Duel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="main-container">
+    <h1>Material Control - 7 Wonders: Duel</h1>
+    <div class="players-container">
+      <div class="player" id="player1">
+        <h2>
+          <span class="player-name" contenteditable="false">Player 1</span>
+          <i class="fa fa-edit"></i>
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Generation per Round</th>
+              <th>Total Available (-1, -2)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="resource" data-resource="madeira">
+              <td>Wood</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="pedra">
+              <td>Stone</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="argila">
+              <td>Clay</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="vidro">
+              <td>Glass</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="papiro">
+              <td>Papyrus</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="player" id="player2">
+        <h2>
+          <span class="player-name" contenteditable="false">Player 2</span>
+          <i class="fa fa-edit"></i>
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>Generation per Round</th>
+              <th>Total Available (-1, -2)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="resource" data-resource="madeira">
+              <td>Wood</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="pedra">
+              <td>Stone</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="argila">
+              <td>Clay</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="vidro">
+              <td>Glass</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+            <tr class="resource" data-resource="papiro">
+              <td>Papyrus</td>
+              <td>
+                <button class="decrement-gen">-</button>
+                <span class="generation-value">0</span>
+                <button class="increment-gen">+</button>
+              </td>
+              <td>
+                <span class="total-value">0</span>
+                <button class="subtract-one">-1</button>
+                <button class="subtract-two">-2</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button class="turn-button" id="prevTurnBtn">Previous Round</button>
+    <button class="turn-button" id="nextTurnBtn">Next Round</button>
+    <p class="info">Round: <span id="roundCounter">0</span> - Press the spacebar to update the round.</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

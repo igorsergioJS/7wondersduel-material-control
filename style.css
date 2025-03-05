@@ -1,0 +1,134 @@
+:root {
+    --bg-color: #f0f0f0;
+    --card-bg: #fff;
+    --primary-color: #6f706d;
+    --text-color: #333;
+    --border-radius: 5px;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: 0.2s ease-in-out;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+  }
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .players-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  @media (max-width: 820px) {
+    .players-container {
+      flex-direction: column;
+    }
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+  }
+  .player {
+    background: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .player h2 {
+    text-align: center;
+    color: var(--text-color);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  th {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    color: #fff;
+  }
+  button:hover {
+    filter: brightness(90%);
+  }
+  .turn-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    width: 30%;
+    height: 35px;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: #fff;
+    transition: var(--transition);
+  }
+  .generation-value, .total-value {
+    display: inline-block;
+    min-width: 25px;
+    text-align: center;
+  }
+  .info {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+  }
+  .total-value {
+    font-weight: bold;
+    cursor: pointer;
+  }
+  tr.resource[data-resource="madeira"] {
+    background-color: #a8d5ba;
+  }
+  tr.resource[data-resource="madeira"] button {
+    background-color: #8ac9a1;
+  }
+  tr.resource[data-resource="pedra"] {
+    background-color: #c0c0c0;
+  }
+  tr.resource[data-resource="pedra"] button {
+    background-color: #a8a8a8;
+  }
+  tr.resource[data-resource="argila"] {
+    background-color: #e2725b;
+  }
+  tr.resource[data-resource="argila"] button {
+    background-color: #d96144;
+  }
+  tr.resource[data-resource="vidro"] {
+    background-color: #add8e6;
+  }
+  tr.resource[data-resource="vidro"] button {
+    background-color: #92c0d1;
+  }
+  tr.resource[data-resource="papiro"] {
+    background-color: #fdf6e3;
+  }
+  tr.resource[data-resource="papiro"] button {
+    background-color: #f0e3b2;
+  }
+  
